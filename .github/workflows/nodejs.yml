@@ -24,3 +24,14 @@ jobs:
 
       - name: Run tests
         run: npm test
+      # 🐛 Debug Step 1: Show current folder contents
+      - name: Show current directory contents
+        run: ls -la
+
+      # 🐛 Debug Step 2: Check if node_modules was created
+      - name: Show installed node modules
+        run: ls -la node_modules || echo "node_modules not found"
+
+      # 🧪 Test step
+      - name: Run tests
+        run: npm test
